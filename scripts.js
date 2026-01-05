@@ -1,7 +1,6 @@
 // --- CONFIG: GANTI DENGAN SUPABASE KAMU ---
-const SUPABASE_URL = 'https://your-project.supabase.co';
-const SUPABASE_ANON_KEY = 'your-anon-key-here';
-
+const SUPABASE_URL = 'https://klyomaozvtfqsjxsuvwx.supabase.co'; // ← paste Project URL
+const SUPABASE_ANON_KEY = 'sb_publishable_G0pnYrSg78upUR2-gUNtJw_NuSCpQ6j'; // ← paste Publishable API Key
 // Import Supabase client (via CDN di masa depan, tapi untuk sekarang kita pakai script inline)
 let supabase;
 
@@ -153,5 +152,6 @@ window.addEventListener('load', async () => {
   document.body.classList.add(savedTheme);
   renderPage();
 });
+
 
 window.addEventListener('hashchange', renderPage);
