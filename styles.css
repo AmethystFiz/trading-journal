@@ -78,3 +78,36 @@ th, td { padding: 10px; text-align: left; border-bottom: 1px solid #333; }
   nav { flex-direction: column; gap: 10px; }
   nav a { display: block; margin: 5px 0; }
 }
+
+/* Auth Container */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1e1e2f;
+  border-radius: 8px;
+}
+.auth-container h2 {
+  margin-top: 0;
+  color: white;
+}
+.auth-container input {
+  margin: 10px 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  background: #1e1e2f;
+  border-radius: 8px;
+}
+.stats-grid div {
+  padding: 10px;
+  text-align: center;
+  background: #2d2d3f;
+  border-radius: 4px;
+}
