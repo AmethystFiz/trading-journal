@@ -3,9 +3,18 @@
 const SUPABASE_URL = 'https://klyomaozvtfqsjxsuvwx.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_G0pnYrSg78upUR2-gUNtJw_NuSCpQ6j';
 
-// Inisialisasi Supabase
-const { createClient } = window.supabase;
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// Inisialisasi Supabase (untuk browser)
+let supabase;
+
+if (typeof window !== 'undefined') {
+  // Pastikan Supabase sudah dimuat dari CDN
+  if (window.supabase) {
+    const { createClient } = window.supabase;
+    supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  } else {
+    console.error('Supabase not loaded');
+  }
+}
 
 // === UTILS ===
 function formatDate(dateStr) {
