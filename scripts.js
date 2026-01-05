@@ -1,5 +1,4 @@
 // === SUPABASE CONFIGURATION ===
-// GANTI DENGAN NILAI KAMU DARI SUPABASE → Project Settings → API
 const SUPABASE_URL = 'https://klyomaozvtfqsjxsuvwx.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_G0pnYrSg78upUR2-gUNtJw_NuSCpQ6j';
 
@@ -12,10 +11,9 @@ if (typeof window !== 'undefined') {
     const { createClient } = window.supabase;
     supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } else {
-    console.error('Supabase not loaded');
+    console.error('Supabase not loaded from CDN. Make sure you included the script in index.html.');
   }
 }
-
 // === UTILS ===
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString('en-GB');
@@ -502,3 +500,4 @@ window.deleteTradeUI = deleteTradeUI;
 window.viewTrade = viewTrade;
 window.exportCSV = exportCSV;
 window.exportJSON = exportJSON;
+
